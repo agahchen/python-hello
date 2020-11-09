@@ -1,0 +1,30 @@
+{
+  "@bcgov/generator-bcdk": {
+    "promptValues": {
+      "modules": {
+        "jenkins": {
+          "path": ".jenkins",
+          "name": "jenkins",
+          "namespace": "python-tools",
+          "version": "1.0.0",
+          "environments": {
+            "build": {
+              "namespace": "python-tools"
+            },
+            "dev": {
+              "namespace": "python-tools"
+            },
+            "prod": {
+              "namespace": "python-tools"
+            }
+          },
+          "jenkinsJobName": "_jenkins",
+          "github_owner": "agahchen",
+          "github_repo": "python-hello",
+          "jenkinsFilePath": ".jenkins/Jenkinsfile",
+          "uuid": "e6f291b4-0d33-46d4-b546-d86f9c5f3db4"
+        }
+      }
+    }
+  }
+}
