@@ -45,7 +45,7 @@ objects:
         from:
           kind: ImageStreamTag
           name: ${SOURCE_IMAGE_STREAM_TAG}
-          namespace: ${SOURCE_IMAGE_STREAM_NAMESPACE}
+          #namespace: ${SOURCE_IMAGE_STREAM_NAMESPACE}
       type: Docker
     successfulBuildsHistoryLimit: 2
     triggers:
