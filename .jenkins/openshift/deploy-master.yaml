@@ -41,13 +41,15 @@ objects:
   kind: PersistentVolumeClaim
   metadata:
     name: ${NAME}${SUFFIX}
+    labels:
+      shared: "true"
   spec:
     accessModes:
     - ReadWriteOnce
     storageClassName: netapp-file-standard
     resources:
       requests:
-        storage: 1Gi
+        storage: 5Gi
 - apiVersion: v1
   kind: ServiceAccount
   metadata:
@@ -111,6 +113,8 @@ objects:
             value: ${ENV_NAME}
           - name: ENV_ID
             value: ${ENV_ID}
+          - name: JENKINS_DATA
+            value: /var/lib/jenkins/jobs
           image: ' '
           imagePullPolicy: Always
           livenessProbe:

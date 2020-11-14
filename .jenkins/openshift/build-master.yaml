@@ -39,13 +39,15 @@ objects:
       git:
         ref: ${SOURCE_REPOSITORY_REF}
         uri: ${SOURCE_REPOSITORY_URL}
+      sourceSecret:
+        name: template.jenkins-github
       type: Git
     strategy:
       dockerStrategy:
         from:
           kind: ImageStreamTag
           name: ${SOURCE_IMAGE_STREAM_TAG}
-          #namespace: ${SOURCE_IMAGE_STREAM_NAMESPACE}
+          namespace: ${SOURCE_IMAGE_STREAM_NAMESPACE}
       type: Docker
     successfulBuildsHistoryLimit: 2
     triggers:
@@ -70,7 +72,7 @@ parameters:
   value: v1.0.0
 - name: SOURCE_IMAGE_STREAM_NAMESPACE
   required: true
-  value: bcgov
+  value: python-tools
 - name: SOURCE_IMAGE_STREAM_TAG
   required: true
   value: jenkins-basic:v2-latest
