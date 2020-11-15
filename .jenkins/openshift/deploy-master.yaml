@@ -114,7 +114,7 @@ objects:
           - name: ENV_ID
             value: ${ENV_ID}
           - name: JENKINS_DATA
-            value: /var/lib/jenkins/jobs
+            value: /var/lib/jenkins
           image: ' '
           imagePullPolicy: Always
           livenessProbe:
@@ -147,8 +147,8 @@ objects:
           terminationMessagePath: /dev/termination-log
           terminationMessagePolicy: File
           volumeMounts:
-          - mountPath: /var/lib/jenkins/jobs
-            name: jenkins-jobs
+          - mountPath: /var/lib/jenkins
+            name: jenkins-home
             readOnly: false
           - mountPath: /var/run/pod
             name: pod-metadata
@@ -166,7 +166,7 @@ objects:
         serviceAccountName: ${NAME}${SUFFIX}
         terminationGracePeriodSeconds: 30
         volumes:
-        - name: jenkins-jobs
+        - name: jenkins-home
           persistentVolumeClaim:
             claimName: ${NAME}${SUFFIX}
         - downwardAPI:
