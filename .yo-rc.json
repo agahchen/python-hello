@@ -47,6 +47,13 @@
               "namespace": "python-tools"
             }
           }
+        },
+        ".": {
+          "jenkinsJobName": "python-hello",
+          "github_owner": "agahchen",
+          "github_repo": "python-hello",
+          "jenkinsFilePath": "Jenkinsfile",
+          "uuid": "36c9ca7f-620c-4818-91ea-ffcfc24f98f5"
         }
       }
     }
