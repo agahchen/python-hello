@@ -15,6 +15,7 @@ module.exports = settings => {
     'param':{
       'NAME': phases[phase].name,
       'VERSION': phases[phase].changeId,
+      'SUFFIX': `-${phases[phase].env}-${phases[phase].changeId}`,
       'SOURCE_REPOSITORY_URL': oc.git.http_url,
       'SOURCE_REPOSITORY_REF': oc.git.ref,
       'SOURCE_BASE_CONTEXT_DIR': 'hello-main',
