@@ -11,7 +11,7 @@ module.exports = settings => {
   const templatesLocalBaseUrl = oc.toFileUrl(path.resolve(__dirname, "../../openshift"));
 
   // The building of your cool app goes here ▼▼▼
-  objects.push(...oc.processDeploymentTemplate(`${templatesLocalBaseUrl}/python-chain-build.json`, {
+  objects.push(...oc.processDeploymentTemplate(`${templatesLocalBaseUrl}/python-chain-build.yaml`, {
     'param':{
       'NAME': phases[phase].name,
       'VERSION': phases[phase].changeId,
