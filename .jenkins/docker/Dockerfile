@@ -15,6 +15,6 @@ RUN set -x && \
     chmod -R 644 $JENKINS_REF_HOME && \
     chmod -R g+rwX $JENKINS_REF_HOME
 
-COPY $JENKINS_REF_HOME/jobs $JENKINS_HOME/jobs
+#COPY $JENKINS_REF_HOME/jobs $JENKINS_HOME/jobs
 
 USER 10001
