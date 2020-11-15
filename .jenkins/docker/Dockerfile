@@ -4,7 +4,7 @@ RUN echo "JENKINS_REF_HOME=$JENKINS_REF_HOME"
 RUN find $JENKINS_REF_HOME -type d
 RUN echo "JENKINS_HOME=$JENKINS_HOME"
 RUN find $JENKINS_HOME -type d
-#RUN find / -type d
+RUN find jenkins -type d
 
 USER 0
 COPY ./contrib/jenkins/configuration $JENKINS_REF_HOME
